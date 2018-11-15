@@ -59,16 +59,16 @@ html {
 	overflow-y: scroll; /* always force a scrollbar in non-IE */
 	}
 body {
-	background: #e3e5e5;
+	background: #5cc4fc; /* color background of the whole page*/
 	overflow-x: hidden;
-	height: 4550px;
+	height: 6000px; /*here we declare height of the project*/
 	line-height: 1.5;
 	color: #000;
 	font-size: 14px;
-	font-family: Arial,sans-serif;
+	font-family: Lato, Arial,sans-serif;
 }
 h1 {
-	color: #21a97e;
+	color: #478bca;
 }
 a, a:link,
 a:active,
@@ -77,7 +77,7 @@ a:visited {
 	-moz-transition: color 0.25s ease-out;
 	-o-transition: color 0.25s ease-out;
 	transition: color 0.25s ease-out;
-	color:#21a97e;
+	color:#478bca;
 	outline: none;
 	text-decoration:none;
 	}
@@ -89,6 +89,8 @@ img {
 	}
 p {
 	margin:1em 0;
+	font-size: 1.5em;
+	color: #fff;
 	}
 
 /* Common shared styles
@@ -97,8 +99,8 @@ p {
 hr {
 	margin: 0;
 	border: none;
-	border-top: 1px solid #3b3b3b;
-	border-bottom: 1px solid #3b3b3b;
+	border-top: 1px solid #478bca;
+	/*border-bottom: 1px solid #3b3b3b;*/
 	height: 3px;
 }
 
@@ -161,29 +163,42 @@ nav.next-prev {
 	a.prev,
 	a.next {
 		display: block;
-		width: 15px;
-		height: 11px;
+		width: 30px;
+		height: 30px;
 		text-indent: -9999px;
 		}
 	a.prev {
-		margin: 0 auto 5px auto;
+		/*margin around the arrow*/
+		margin: 0 auto 10px auto;
+		/*arrow png 0 0 - which dimentions of the spirte to read*/
 		background: transparent url('../img/scroll-arrow-up.png') 0 0 no-repeat;
 		}
+
+		/*hover on the arrows*/
 		a.prev:hover {
-			background: transparent url('../img/scroll-arrow-up.png') 0 -11px no-repeat;
+			background: transparent url('../img/scroll-arrow-up.png') 0 -30px no-repeat;
 			}
 	a.next {
-		margin: 5px auto 0 auto;
-		background: transparent url('../img/scroll-arrow-down.png') -1px 0 no-repeat;
+		margin: 10px auto 0 auto;
+		background: transparent url('../img/scroll-arrow-down.png') -1px 2px no-repeat;
 		}
 		a.next:hover {
-			background: transparent url('../img/scroll-arrow-down.png') -1px -11px no-repeat;
+			background: transparent url('../img/scroll-arrow-down.png') -1px -30px no-repeat;
 			}
 
 /* Parallax
 *****************************************************************/
 
 /* content */
+#container
+{
+	position:absolute;
+	width:540px;	
+	display:inline-block;
+	left:50%;
+	margin-left:-270px;
+}
+
 #content {
 	z-index: 4;
 	position: relative;
@@ -193,39 +208,40 @@ nav.next-prev {
 	line-height: 1.7;
 	}
 	#content article {
-		width: 300px;
+		width: 100%;
 		}
-		#manned-flight ,
-		#frameless-parachute,
-		#english-channel,
-		#about {
+		#first-point ,
+		#second-point,
+		#third-point,
+		#fourth-point, 
+		#fifth-point {
 			padding-top: 105px;
 			}
-		#manned-flight {
+		#first-point {
 			position: absolute;
 			top: 0px;
 			}
-		#frameless-parachute {
+		#second-point {
 			position: absolute;
 			top: 1090px;
 			}
-		#english-channel {
+		#third-point {
 			position: absolute;
 			top: 2180px;
 			}
 			#content h1 {
 				margin: 0 0 25px 0;
 				font-size: 60px;
-				font-family: Georgia, serif;
+				font-family: Lato, Georgia, serif;
 				font-weight: normal;
 				line-height: 65px;
 				}
-		#about {
+		#fourth-point {
 			position: absolute;
 			top: 3270px;
 			}
 
-		#extra-para {
+		#fifth-point {
 			position: absolute;
 			top: 4360px;
 		}

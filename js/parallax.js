@@ -9,7 +9,8 @@ $(document).ready(function() {
     });
     
 	/* Next/prev and primary nav btn click handlers */
-	$('a.manned-flight').click(function(){
+	/*smooth scroll*/
+	$('a.first-point').click(function(){
     	$('html, body').animate({
     		scrollTop:0
     	}, 1000, function() {
@@ -17,34 +18,34 @@ $(document).ready(function() {
 		});
     	return false;
 	});
-    $('a.frameless-parachute').click(function(){
+    $('a.second-point').click(function(){
     	$('html, body').animate({
-    		scrollTop:$('#frameless-parachute').offset().top
+    		scrollTop:$('#second-point').offset().top
     	}, 1000, function() {
 	    	parallaxScroll(); // Callback is required for iOS
 		});
     	return false;
     });
-    $('a.english-channel').click(function(){
+    $('a.third-point').click(function(){
     	$('html, body').animate({
-    		scrollTop:$('#english-channel').offset().top
+    		scrollTop:$('#third-point').offset().top
     	}, 1000, function() {
 	    	parallaxScroll(); // Callback is required for iOS
 		});
     	return false;
     });
-	$('a.about').click(function(){
+	$('a.fourth-point').click(function(){
     	$('html, body').animate({
-    		scrollTop:$('#about').offset().top
+    		scrollTop:$('#fourth-point').offset().top
     	}, 1000, function() {
 	    	parallaxScroll(); // Callback is required for iOS
 		});
     	return false;
     });
 
-	$('a.extra-para').click(function(){
+	$('a.fifth-point').click(function(){
     	$('html, body').animate({
-    		scrollTop:$('#extra-para').offset().top
+    		scrollTop:$('#fifth-point').offset().top
     	}, 1000, function() {
 	    	parallaxScroll(); // Callback is required for iOS
 		});
@@ -72,26 +73,32 @@ function parallaxScroll(){
 
 }
 
-/* Set navigation dots to an active state as the user scrolls */
+
+
+	/* Set navigation dots to an active state as the user scrolls */
 function redrawDotNav(){
 	var section1Top =  0;
 	// The top of each section is offset by half the distance to the previous section.
-	var section2Top =  $('#frameless-parachute').offset().top - (($('#english-channel').offset().top - $('#frameless-parachute').offset().top) / 2);
-	var section3Top =  $('#english-channel').offset().top - (($('#about').offset().top - $('#english-channel').offset().top) / 2);
-	var section4Top =  $('#about').offset().top - (($('#extra-para').offset().top - $('#about').offset().top) / 2);
-	var section5Top =  $('#extra-para').offset().top - (($(document).height() - $('#about').offset().top) / 2);;
-
+	var section2Top =  $('#second-point').offset().top - (($('#third-point').offset().top - $('#second-point').offset().top) / 2);
+	var section3Top =  $('#third-point').offset().top - (($('#fourth-point').offset().top - $('#third-point').offset().top) / 2);
+	var section4Top =  $('#fourth-point').offset().top - (($('#fifth-point').offset().top - $('#fifth-point').offset().top) / 2);
+	var section5Top =  $('#fifth-point').offset().top - (($(document).height() - $('#fifth-point').offset().top) / 2);;
+	
 	$('nav#primary a').removeClass('active');
 	if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
-		$('nav#primary a.manned-flight').addClass('active');
+		$('nav#primary a.first-point').addClass('active');
+
 	} else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-		$('nav#primary a.frameless-parachute').addClass('active');
+		$('nav#primary a.second-point').addClass('active');
+
 	} else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
-		$('nav#primary a.english-channel').addClass('active');
-	}  else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
-		$('nav#about a.english-channel').addClass('active');
-	}else if ($(document).scrollTop() >= section5Top){
-		$('nav#primary a.extra-para').addClass('active');
+		$('nav#primary a.third-point').addClass('active');
+
+	} else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+		$('nav#primary a.fourth-point').addClass('active');
+
+	} else if ($(document).scrollTop() >= section5Top){
+		$('nav#primary a.fifth-point').addClass('active');
 	}
 	
 }
