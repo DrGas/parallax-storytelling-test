@@ -70,6 +70,12 @@ body {
 h1 {
 	color: #478bca;
 }
+
+h2 {
+
+	color:#fff;
+}
+
 a, a:link,
 a:active,
 a:visited {
@@ -123,6 +129,14 @@ hr {
 		font-weight: bold;
 		}
 
+#container
+{
+	position:absolute;
+	width:540px;	
+	display:inline-block;
+	left:50%;
+	margin-left:-270px;
+}
 /* Nav
 *****************************************************************/
 
@@ -190,14 +204,7 @@ nav.next-prev {
 *****************************************************************/
 
 /* content */
-#container
-{
-	position:absolute;
-	width:540px;	
-	display:inline-block;
-	left:50%;
-	margin-left:-270px;
-}
+
 
 #content {
 	z-index: 4;
@@ -229,13 +236,16 @@ nav.next-prev {
 			position: absolute;
 			top: 2180px;
 			}
-			#content h1 {
+			#content h1, h2 {
+				text-align: center;
 				margin: 0 0 25px 0;
-				font-size: 60px;
+				font-size: 3em;
 				font-family: Lato, Georgia, serif;
 				font-weight: normal;
 				line-height: 65px;
 				}
+			 
+			
 		#fourth-point {
 			position: absolute;
 			top: 3270px;
@@ -245,6 +255,31 @@ nav.next-prev {
 			position: absolute;
 			top: 4360px;
 		}
+
+	/*images*/		
+	#intro-img {
+		margin: 10px auto 0 auto;
+		width:785px;
+		height: 400px;
+		background: transparent url('../img/goal-14-intro.png') -1px 2px no-repeat;
+		}
+	
+
+	#Earth {
+		margin: 10px auto 0 auto;
+		width:128px;
+		height: 128px;
+		background: transparent url('../img/earth.png') -1px 2px no-repeat;
+	}
+
+	#icon-goal14 {
+margin: 10px auto 0 auto;
+
+		width: 128px;
+		height: 130px;
+		background: transparent url('../img/icon-goal14.png') -1px 2px no-repeat;
+	}
+
 /* foreground (ballons/landscape) */
 #parallax-bg3 {
 	z-index: 3;
